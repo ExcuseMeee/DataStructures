@@ -1,0 +1,14 @@
+hash encrypt a key so that it can fit into our index range. for example if we want to store 100 student records and the key is the SSN (9 digits). if we straight-up use the SSN for indexing, it means we need 1 billion rows! we only need 100. so we need a way to map each SSN to a unique index.
+process: hashing and collision resolution (collision occurs when hashing two different keys creates the same output)
+  using modulus N with N as a prime number is a good way to hash (it has reduced probability of collisions)
+
+
+resolving collisions: open addressing or restructuring the hash table
+open addressing: probe(search) for open locations in the hash table
+  linear probe: if hash location is already occupied, keep moving one space over until we reach open space
+  quadratic: if linear probing is i+1, i+2,... quadratic is i+1^2, i+2^2, i+3^2... the space we move over grows quadratically
+  double hashing: two hash functions, the second one determines the step size
+
+restructuring hash table: the same index location can store multiple items... 
+separate chaining: each index is a linked list, whenever collision occurs, add to linked list
+bucket hashing: each index is a static array. (so the hash table is like a 2d array)

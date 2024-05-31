@@ -1,0 +1,9 @@
+depth first search: explore a branch as far as possible before exploring another branch
+breadth first search: explore neighboring vertices first, then do same for neighbors. good for finding shortest path in unweighted graph
+dijkstra's algorithm: greedy alg (greedy algs solve problems in stages by doing what is best at each state. think of finding change; start with quarters, then work down to dimes, nickels, pennies)
+
+spanning trees: a spanning tree of graph G is a tree that includes every vertex of G and is a subgraph of G (every edge in the tree belongs to G)
+*trees are a non-cyclic graph
+
+kruskal's algorithm: greedy alg. creates a spanning tree by adding the smallest edges first. ignores edges that will cause a cyclic graph. when adding edges, if the edge will connect vertices that are already connected, we ignore that
+
